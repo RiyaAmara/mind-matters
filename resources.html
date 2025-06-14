@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Matters - Resources</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8f7;
+      color: #333;
+      text-align: center;
+    }
+
+    header, footer {
+      background-color: #88c9bf;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    nav {
+      background-color: #fff;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    /* Global link styles */
+    a {
+      color: #2a7d74;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1e5c56;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .section {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #2a7d74;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    .worksheet-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .worksheet-preview {
+      width: 160px;
+      text-align: center;
+    }
+
+    .worksheet-preview img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .worksheet-preview img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Chatbot styles */
+    .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2a7d74;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .chatbot-container {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background-color: #88c9bf;
+      color: white;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    .chat-messages {
+      height: 200px;
+      padding: 1rem;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #eee;
+    }
+
+    .chat-input input {
+      flex-grow: 1;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .chat-input button {
+      background-color: #2a7d74;
+      color: white;
+      border: none;
+      padding: 0 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mind Matters</h1>
+    <p>Helpful Resources for Mental Wellness</p>
+  </header>
+
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="journal.html">Journal</a>
+    <a href="mindfulness.html">Mindfulness</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="section">
+      <h2>Online Support</h2>
+      <ul>
+        <li><a href="https://www.betterhelp.com/" target="_blank">BetterHelp</a> – Online therapy and counseling services</li>
+        <li><a href="https://www.7cups.com/" target="_blank">7 Cups</a> – Free emotional support & chat rooms</li>
+        <li><a href="https://www.nami.org/Home" target="_blank">National Alliance on Mental Illness (NAMI)</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Emergency Contacts</h2>
+      <ul>
+        <li><strong>National Suicide Prevention Lifeline:</strong> <a href="https://988lifeline.org/" target="_blank">988</a></li>
+        <li><strong>Crisis Text Line:</strong> Text HOME to <a href="https://www.crisistextline.org/" target="_blank">741741</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Helpful Reads</h2>
+      <ul>
+        <li><a href="https://www.goodreads.com/book/show/46674.Feeling_Good" target="_blank">"Feeling Good" by David D. Burns</a></li>
+        <li><a href="https://www.goodreads.com/book/show/18693771-the-body-keeps-the-score" target="_blank">"The Body Keeps the Score" by Bessel van der Kolk</a></li>
+        <li><a href="https://www.umassmed.edu/cfm/mindfulness-based-programs/mbsr-courses/" target="_blank">Mindfulness-Based Stress Reduction Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Printable Worksheets</h2>
+      <p style="max-width: 700px; margin: 0 auto 1.5rem; color: #444;">
+        These printable worksheets are designed to help you reflect, manage emotions, and practice mindfulness.
+        They're great for journaling, check-ins, or developing healthy coping skills.
+      </p>
+
+      <div class="worksheet-grid">
+        <div class="worksheet-preview">
+          <a href="mindmattersworksheets/feelings-journal.pdf" target="_blank">
+            <img src="mindmattersworksheets/feelings-journal.png" alt="Feelings Journal">
+            <p>Feelings Journal</p>
+          </a>
+        </div>
+        <div class="worksheet-preview">
+          <a href="mindmattersworksheets/mood-meter.pdf" target="_blank">
+            <img src="mindmattersworksheets/mood-meter.png" alt="Mood Meter">
+            <p>Mood Meter</p>
+          </a>
+        </div>
+        <div class="worksheet-preview">
+          <a href="mindmattersworksheets/self-checkin.pdf" target="_blank">
+            <img src="mindmattersworksheets/self-checkin.png" alt="Self Check-In">
+            <p>Self Check-In</p>
+          </a>
+        </div>
+        <div class="worksheet-preview">
+          <a href="mindmattersworksheets/coping-cards.pdf" target="_blank">
+            <img src="mindmattersworksheets/coping-cards.png" alt="Coping Cards">
+            <p>Coping Cards</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Mind Matters. Created by Riya Amara with care.
+  </footer>
+
+  <!-- Chatbot Button -->
+  <button class="chatbot-button" onclick="toggleChat()">💬</button>
+
+  <!-- Chatbot Container -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chat-header">Mind Matters Bot</div>
+    <div class="chat-messages" id="chatMessages">
+      <div><strong>Bot:</strong> Hi there 👋 How can I help today? Ask me for a breathing tip, quote, or mindfulness exercise.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type here..." />
+      <button onclick="handleUserInput()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById("chatbot");
+      chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+    }
+
+    function handleUserInput() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      const chatBox = document.getElementById("chatMessages");
+
+      if (!message) return;
+
+      const userMsg = document.createElement("div");
+      userMsg.innerHTML = `<strong>You:</strong> ${message}`;
+      chatBox.appendChild(userMsg);
+
+      let botReply = "Thanks for reaching out. 💬 Ask me for a quote, breathing tip, or mindfulness activity.";
+
+      if (message.toLowerCase().includes("quote")) {
+        botReply = "“Almost everything will work again if you unplug it for a few minutes, including you.” – Anne Lamott";
+      } else if (message.toLowerCase().includes("breath")) {
+        botReply = "Try this: Inhale for 4, hold for 4, exhale for 4, hold for 4. Repeat 4 times.";
+      } else if (message.toLowerCase().includes("tip") || message.toLowerCase().includes("exercise")) {
+        botReply = "Mindfulness tip: Focus on 3 things you can see, hear, and feel right now.";
+      }
+
+      const botMsg = document.createElement("div");
+      botMsg.innerHTML = `<strong>Bot:</strong> ${botReply}`;
+      chatBox.appendChild(botMsg);
+
+      input.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>

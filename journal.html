@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Matters - Journal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8f7;
+      color: #333;
+      text-align: center;
+    }
+    header, footer {
+      background-color: #88c9bf;
+      color: white;
+      padding: 1.5rem;
+    }
+    nav {
+      background-color: #fff;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #2a7d74;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .section {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    textarea {
+      width: 90%;
+      height: 200px;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      background-color: #2a7d74;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #256b64;
+    }
+
+    /* Chatbot Styles */
+    #chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2a7d74;
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    #chatbot-window {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 280px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      z-index: 1001;
+      font-family: Arial, sans-serif;
+    }
+
+    #chatbot-header {
+      background-color: #88c9bf;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+    }
+
+    #chatbot-body {
+      padding: 1rem;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    #chatbot-body p {
+      margin: 0.5rem 0;
+    }
+
+    #chatbot-body input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mind Matters</h1>
+    <p>Write Your Thoughts Freely</p>
+  </header>
+
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="journal.html">Journal</a>
+    <a href="mindfulness.html">Mindfulness</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="section">
+      <h2>Daily Reflection</h2>
+      <p>Take a few minutes to write down how you're feeling today.</p>
+      <textarea placeholder="Start typing your thoughts here..."></textarea>
+      <br>
+      <button onclick="alert('Your entry has been saved (not really, this is a demo).')">Save Entry</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Mind Matters. Created by [Your Name] with care.
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-button" onclick="toggleChatbot()">💬</div>
+  <div id="chatbot-window">
+    <div id="chatbot-header">
+      Mind Matters Bot 
+      <span onclick="toggleChatbot()" style="cursor:pointer; float:right;">✖</span>
+    </div>
+    <div id="chatbot-body">
+      <p>Hello! I'm here to support you 💚</p>
+      <input type="text" placeholder="Type your message..." onkeydown="if(event.key==='Enter'){chatResponse(this)}" />
+    </div>
+  </div>
+
+  <script>
+    function toggleChatbot() {
+      const chat = document.getElementById('chatbot-window');
+      chat.style.display = (chat.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function chatResponse(input) {
+      const message = input.value.trim();
+      if (!message) return;
+      const chatBody = document.getElementById('chatbot-body');
+      const userMsg = document.createElement('p');
+      userMsg.style.textAlign = 'right';
+      userMsg.textContent = message;
+      chatBody.insertBefore(userMsg, input);
+      input.value = '';
+
+      // Simple bot reply
+      setTimeout(() => {
+        const botMsg = document.createElement('p');
+        botMsg.textContent = "Thanks for sharing. You're not alone 💬";
+        chatBody.insertBefore(botMsg, input);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 600);
+    }
+  </script>
+</body>
+</html>
